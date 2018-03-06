@@ -1,0 +1,112 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.brainwashing.onlinebookingclinic.Fragments.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/relativeLayout">
+
+            <TextView
+                android:id="@+id/profile_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="61dp"
+                android:layout_marginTop="32dp"
+                android:text="Steven Gerrard"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button" />
+
+            <TextView
+                android:id="@+id/profile_email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/profile_name_text"
+                android:layout_below="@+id/profile_name_text"
+                android:text="steven@gmail.com" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginTop="12dp"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/edit_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:drawablePadding="10dip"
+                android:drawableStart="@drawable/ic_profile"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Edit profile" />
+
+            <view
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/edit_profile_btn"
+                android:background="@color/light_gray" />
+            <Button
+                android:id="@+id/account_btn"
+                android:layout_below="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:drawablePadding="10dip"
+                android:drawableStart="@drawable/ic_account"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="account" />
+            <view
+                android:id="@+id/view2"
+                android:layout_below="@+id/account_btn"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+            <Button
+                android:id="@+id/signoutBtn"
+                android:layout_below="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:drawablePadding="10dip"
+                android:drawableStart="@drawable/ic_logout"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Log out" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,151 @@
+{
+  "project_info": {
+    "project_number": "301708030437",
+    "firebase_url": "https://book-dentist.firebaseio.com",
+    "project_id": "book-dentist",
+    "storage_bucket": "book-dentist.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301708030437:android:1a223f7b0efd9a74",
+        "android_client_info": {
+          "package_name": "com.example.blink_182.bookdentist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301708030437-h2crqm30ual0pdii4tht1gql41jfr1e8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blink_182.bookdentist",
+            "certificate_hash": "a039c2c0c72b8f43f07ea2199d5c80d80dd34502"
+          }
+        },
+        {
+          "client_id": "301708030437-jvr0dp5slt7jl6261ftrtgofpk15k0ak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVfdsrL2XWdZcDfPFGOySO156to0plXng"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301708030437-jvr0dp5slt7jl6261ftrtgofpk15k0ak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301708030437:android:972b0adeb0331e88",
+        "android_client_info": {
+          "package_name": "com.example.project_demo.bookingclinicapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301708030437-leo8g2ve4dktcnesbrp0fcqgrrlnfqgf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project_demo.bookingclinicapp",
+            "certificate_hash": "a2843f978f1848d89690f404af68f95baac91ea4"
+          }
+        },
+        {
+          "client_id": "301708030437-u9uit96krcd7pte5nl8b6rhujt3sbh8s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project_demo.bookingclinicapp",
+            "certificate_hash": "a039c2c0c72b8f43f07ea2199d5c80d80dd34502"
+          }
+        },
+        {
+          "client_id": "301708030437-jvr0dp5slt7jl6261ftrtgofpk15k0ak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVfdsrL2XWdZcDfPFGOySO156to0plXng"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301708030437-jvr0dp5slt7jl6261ftrtgofpk15k0ak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301708030437:android:fab4ff462b4c48cc",
+        "android_client_info": {
+          "package_name": "com.example.brainwashing.onlinebookingclinic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301708030437-ggv67347s55j7b1l5f08caak38ihqr6a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.brainwashing.onlinebookingclinic",
+            "certificate_hash": "a2843f978f1848d89690f404af68f95baac91ea4"
+          }
+        },
+        {
+          "client_id": "301708030437-jvr0dp5slt7jl6261ftrtgofpk15k0ak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVfdsrL2XWdZcDfPFGOySO156to0plXng"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301708030437-jvr0dp5slt7jl6261ftrtgofpk15k0ak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

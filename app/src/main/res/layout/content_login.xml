@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.brainwashing.onlinebookingclinic.LoginActivity"
+    tools:showIn="@layout/activity_login">
+
+        <EditText
+            android:id="@+id/usernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="91dp"
+            android:ems="10"
+            android:hint="username"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/passTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/usernameTxt"
+            android:layout_below="@+id/usernameTxt"
+            android:layout_marginTop="21dp"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/googleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/passTxt"
+            android:layout_alignStart="@+id/passTxt"
+            android:layout_below="@+id/passTxt"
+            android:layout_marginTop="62dp"
+            android:text="Google" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/googleBtn"
+            android:layout_alignStart="@+id/googleBtn"
+            android:layout_below="@+id/googleBtn"
+            android:layout_marginTop="16dp"
+            android:text="sign in" />
+
+        <Button
+            android:id="@+id/createAccountBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/loginBtn"
+            android:layout_alignStart="@+id/loginBtn"
+            android:layout_below="@+id/loginBtn"
+            android:layout_marginTop="19dp"
+            android:text="Sign up" />
+
+</RelativeLayout>

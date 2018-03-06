@@ -1,0 +1,42 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.brainwashing.onlinebookingclinic.Fragments.SearchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="196dp"
+        android:text="search" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_search"
+        android:layout_alignEnd="@+id/btn_search"
+        android:layout_alignStart="@+id/btn_search"
+        android:layout_marginBottom="78dp"
+        android:drawableStart="@drawable/ic_my_location"
+        android:text="location" />
+
+    <Button
+        android:id="@+id/btn_speciality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:drawableRight="@drawable/ic_arrow_drop_down_24dp"
+        android:text="speciality" />
+</RelativeLayout>
+</FrameLayout>

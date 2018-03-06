@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.brainwashing.onlinebookingclinic.SignupActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/fnameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/lnameTxt"
+            android:layout_marginTop="58dp"
+            android:ems="10"
+            android:hint="Firstname"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/lnameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fnameTxt"
+            android:layout_marginStart="74dp"
+            android:ems="10"
+            android:hint="Lastname"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/passTxt"
+            android:layout_alignStart="@+id/passTxt"
+            android:layout_below="@+id/passTxt"
+            android:layout_marginTop="45dp"
+            android:text="join now" />
+
+        <EditText
+            android:id="@+id/emailTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/lnameTxt"
+            android:layout_below="@+id/lnameTxt"
+            android:ems="10"
+            android:hint="Your Email"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/passTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/emailTxt"
+            android:layout_below="@+id/emailTxt"
+            android:ems="10"
+            android:hint="New password"
+            android:inputType="textPersonName" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
