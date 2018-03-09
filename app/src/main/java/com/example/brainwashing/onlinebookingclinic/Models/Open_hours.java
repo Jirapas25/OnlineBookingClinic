@@ -1,7 +1,9 @@
 package com.example.brainwashing.onlinebookingclinic.Models;
 
-public class Open_hours {
+import java.io.Serializable;
 
+public class Open_hours implements Serializable {
+    private final static long serialVersionUID = 291879457057582072L;
     private String fri;
     private String mon;
     private String sat;

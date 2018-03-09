@@ -18,13 +18,88 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/map"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+            android:layout_height="match_parent">
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+                <LinearLayout
+                    android:id="@+id/markerDetail"
+                    android:layout_width="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgDetail"
+                        android:layout_width="110dp"
+                        android:layout_height="150dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/pexels_photo_clinic2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:singleLine="true"
+                            android:text="name"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/blue"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:layout_marginBottom="5dp"
+                            android:paddingHorizontal="10dp"
+                            android:text="address" />
+
+                        <TextView
+                            android:id="@+id/open"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:text="open" />
+
+                        <TextView
+                            android:id="@+id/distance"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:text="distance" />
+
+                        <Button
+                            android:id="@+id/btn_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@color/blue"
+                            android:text="More" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+        </RelativeLayout>
 
     </ViewSwitcher>
 

@@ -3,39 +3,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_specialty_menu_bottom"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
     app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
 
     <TextView
-        android:id="@+id/menu_bottom_sheet_add"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
         android:layout_gravity="center"
-        android:drawablePadding="@dimen/activity_horizontal_margin"
-        android:gravity="center_vertical"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:text="1111" />
+        android:text="Filter" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
 
-    <TextView
-        android:id="@+id/menu_bottom_sheet_edit"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:drawablePadding="@dimen/activity_horizontal_margin"
-        android:gravity="center_vertical"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:text="2222" />
 
-    <TextView
-        android:id="@+id/menu_bottom_sheet_delete"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:drawablePadding="@dimen/activity_horizontal_margin"
-        android:gravity="center_vertical"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:text="333" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/simpleSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="13dp"
+            android:drawablePadding="10dp"
+            android:checked="false"
+            android:drawableStart="@drawable/ic_access_time_black_24dp"
+            android:paddingHorizontal="10dp"
+            android:text="Open Now" />
+
+        <TextView
+            android:id="@+id/txt_show_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_local_taxi_black_24dp"
+            android:drawablePadding="10dp"
+            android:text="Distance : "/>
+
+
+        <SeekBar
+            android:id="@+id/seekBarDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="15"
+            android:progress="5"/>
+
+        <Button
+            android:id="@+id/btn_filter_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Show Result" />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

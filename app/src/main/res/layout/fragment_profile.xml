@@ -63,7 +63,7 @@
                 android:paddingRight="10dp"
                 android:text="Edit profile" />
 
-            <view
+            <View
                 android:id="@+id/view1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -84,7 +84,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="account" />
-            <view
+            <View
                 android:id="@+id/view2"
                 android:layout_below="@+id/account_btn"
                 android:layout_width="match_parent"

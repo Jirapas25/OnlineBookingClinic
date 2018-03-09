@@ -80,7 +80,7 @@
                 android:paddingTop="4dp"/>
             <Button
                 android:id="@+id/filterBtn"
-                android:text="Filters"
+                android:text="Filter"
                 android:textSize="12dp"
                 android:textColor="@color/blue"
                 android:layout_width="0dp"

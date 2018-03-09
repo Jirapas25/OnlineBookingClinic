@@ -1,6 +1,7 @@
 package com.example.brainwashing.onlinebookingclinic.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.brainwashing.onlinebookingclinic.ClinicDetailsActivity;
 import com.example.brainwashing.onlinebookingclinic.Models.ClinicDataModel;
 import com.example.brainwashing.onlinebookingclinic.R;
 
@@ -21,48 +23,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
-    List<ClinicDataModel> clinicListAll = new ArrayList<>();
+
     List<ClinicDataModel> clinicList = new ArrayList<>();
-    List<Bitmap> photo = new ArrayList<>();
     private Context mContext;
+
 
     public RecycleAdapter(Context context, List<ClinicDataModel> dataset) {
         clinicList = dataset;
         mContext = context;
     }
 
-    public void NoFilter(List<ClinicDataModel> data){
-        //clinicList.clear();
-        clinicList = data;
-        notifyDataSetChanged();
-
-        Log.i("do",String.valueOf(clinicListAll.size()));
-    }
-
-    public void FilterByOpenNow(List<ClinicDataModel> data){
-        Log.i("do",String.valueOf(clinicListAll.size()));
-
-        clinicList = data;
-        notifyDataSetChanged();
-        Log.i("do","nonow");
-
-    }
-
     public void updateData(List<ClinicDataModel> data){
-
+        Log.i("do","update recycleview");
+        clinicList = data;
+        notifyDataSetChanged();
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_list_layout, parent, false);
-
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        ClinicDataModel clinic_model = clinicList.get(position);
+        final ClinicDataModel clinic_model = clinicList.get(position);
         float dist = clinic_model.distance/1000;
         String show_dist = String.format("%.01f", dist);
 
@@ -80,18 +66,19 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
                 .load(clinic_model.getClinic_image())
                 .into(holder.mImage);
 
-        /*ShowClinicHorizonAdapter hzAdapter = new ShowClinicHorizonAdapter(mContext,clinic_model);
+        ShowClinicHorizonAdapter hzAdapter = new ShowClinicHorizonAdapter(mContext,clinic_model);
         holder.recyclerListHz.setHasFixedSize(true);
         LinearLayoutManager horizontalManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
         holder.recyclerListHz.setLayoutManager(horizontalManager);
-        holder.recyclerListHz.setAdapter(hzAdapter);*/
-        
+        holder.recyclerListHz.setAdapter(hzAdapter);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Log.i("ver", "click" + position);
+                Intent in = new Intent(mContext, ClinicDetailsActivity.class);
+                in.putExtra("clinicDetails",clinic_model);
+                mContext.startActivity(in);
             }
         });
     }
@@ -99,7 +86,6 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     @Override
     public int getItemCount() {
         return clinicList.size();
-
     }
 
 
@@ -110,7 +96,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         public TextView mDistance;
         public TextView mOpen;
         public ImageView mImage;
-        //public RecyclerView recyclerListHz;
+        public RecyclerView recyclerListHz;
 
         public ViewHolder(View view) {
             super(view);
@@ -119,7 +105,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             mImage = (ImageView) view.findViewById(R.id.imageView_clinic_logo);
             mOpen = (TextView) view.findViewById(R.id.txt_open);
             mDistance = (TextView) view.findViewById(R.id.txt_distance);
-            //recyclerListHz = (RecyclerView)view.findViewById(R.id.recycler_view_list);
+            recyclerListHz = (RecyclerView)view.findViewById(R.id.recycler_view_list);
 
             view.setOnClickListener(this);
 

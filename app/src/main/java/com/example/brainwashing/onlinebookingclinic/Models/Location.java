@@ -2,8 +2,10 @@
 package com.example.brainwashing.onlinebookingclinic.Models;
 
 
-public class Location {
+import java.io.Serializable;
 
+public class Location implements Serializable {
+    private final static long serialVersionUID = -3781945279697370526L;
     private double latitude;
     private double longitude;
 

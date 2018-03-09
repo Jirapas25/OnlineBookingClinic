@@ -38,7 +38,7 @@
             android:layout_alignStart="@+id/passTxt"
             android:layout_below="@+id/passTxt"
             android:layout_marginTop="62dp"
-            android:text="Google" />
+            android:background="@drawable/common_google_signin_btn_icon_dark_focused" />
 
         <Button
             android:id="@+id/loginBtn"
@@ -48,7 +48,7 @@
             android:layout_alignStart="@+id/googleBtn"
             android:layout_below="@+id/googleBtn"
             android:layout_marginTop="16dp"
-            android:text="sign in" />
+            android:text="sign in with email" />
 
         <Button
             android:id="@+id/createAccountBtn"

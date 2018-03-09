@@ -21,9 +21,9 @@
     <color name="white">#FFFFFF</color>
     <color name="dark_gray">#313335</color>
     <color name="medium_gray">#86888A</color>
-    <color name="light_gray">#CACCCE</color>
+    <color name="light_gray">#dee0e1</color>
     <color name="accent_blue">#00A0DC</color>
 
-
-
+    <color name="black_alpha_40">#66000000</color>
+    <color name="black_alpha">#5b1b1b1b</color>
 </resources>

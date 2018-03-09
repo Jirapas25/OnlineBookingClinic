@@ -1,42 +1,75 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.brainwashing.onlinebookingclinic.Fragments.SearchFragment">
 
     <!-- TODO: Update blank fragment layout -->
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_search"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="196dp"
-        android:text="search" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/dent" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btn_search"
-        android:layout_alignEnd="@+id/btn_search"
-        android:layout_alignStart="@+id/btn_search"
-        android:layout_marginBottom="78dp"
-        android:drawableStart="@drawable/ic_my_location"
-        android:text="location" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/main_search_selector"
+                android:id="@+id/relativeLayout3">
 
-    <Button
-        android:id="@+id/btn_speciality"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:drawableRight="@drawable/ic_arrow_drop_down_24dp"
-        android:text="speciality" />
-</RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray">
+
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="99dp"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:background="@color/primary_blue"
+                android:text="search by my location" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textSize="18dp"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/primary_blue"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/white"
+                android:layout_marginTop="17dp"
+                android:text="Search by clinic name" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
 </FrameLayout>

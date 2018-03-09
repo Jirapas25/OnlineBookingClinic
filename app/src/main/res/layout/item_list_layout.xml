@@ -3,13 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:paddingHorizontal="6dp">
+    android:paddingHorizontal="15dp"
+    android:paddingTop="15dp">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true"
+
         android:paddingBottom="4dp"
         >
 
@@ -21,20 +26,21 @@
 
             <ImageView
                 android:id="@+id/imageView_clinic_logo"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:padding="2dp"
-                android:layout_margin="4dp"
+                android:padding="5dp"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/pexels_photo_clinic2" />
 
             <TextView
                 android:id="@+id/textView_clinic_name"
-                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
+                android:paddingTop="5dp"
                 android:layout_alignStart="@+id/textView_clinic_address"
                 android:text="Clinic name"
                 android:textColor="@color/primary_text"
@@ -49,6 +55,7 @@
                 android:text="General"
                 android:textSize="14dp" />
             <TextView
+                android:singleLine="true"
                 android:id="@+id/textView_clinic_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,6 +83,8 @@
                 android:paddingTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/gray">
                 <TextView
                     android:layout_width="match_parent"
@@ -92,6 +101,9 @@
                 android:layout_gravity="center_vertical"
                 android:background="@color/gray"
                 android:orientation="horizontal"
+                android:layout_marginHorizontal="5dp"
+
+                android:layout_marginBottom="5dp"
                 android:padding="5dp" />
 
             <TextView

@@ -1,7 +1,9 @@
 package com.example.brainwashing.onlinebookingclinic.Models;
 
-public class Disable_time_slot {
+import java.io.Serializable;
 
+public class Disable_time_slot  implements Serializable {
+    private final static long serialVersionUID = -4253778683918290398L;
     private String date;
     private String time;
 

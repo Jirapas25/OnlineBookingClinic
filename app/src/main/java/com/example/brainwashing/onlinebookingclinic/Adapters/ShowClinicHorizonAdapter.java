@@ -8,10 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.brainwashing.onlinebookingclinic.Models.Booking_time_slots;
 import com.example.brainwashing.onlinebookingclinic.Models.ClinicDataModel;
 import com.example.brainwashing.onlinebookingclinic.R;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class ShowClinicHorizonAdapter extends RecyclerView.Adapter<ShowClinicHorizonAdapter.ViewHolder> {
@@ -23,11 +25,49 @@ public class ShowClinicHorizonAdapter extends RecyclerView.Adapter<ShowClinicHor
     public ShowClinicHorizonAdapter(Context context, ClinicDataModel data) {
         clinicData = data;
         mContext = context;
-        for(int i=0;i<clinicData.getBooking_time_slots().getMon().size();i++){
-            timeSlot.add(clinicData.getBooking_time_slots().getMon().get(i));
+        Calendar calendar = Calendar.getInstance();
+        int today = calendar.get(Calendar.DAY_OF_WEEK);
 
-            //check close day
+        switch (today) {
+            case Calendar.SUNDAY:
+                for(int i=0;i<clinicData.getBooking_time_slots().getSun().size();i++){
+                    timeSlot.add(clinicData.getBooking_time_slots().getSun().get(i));
+                }
+                break;
+            case Calendar.MONDAY:
+                for(int i=0;i<clinicData.getBooking_time_slots().getMon().size();i++){
+                    timeSlot.add(clinicData.getBooking_time_slots().getMon().get(i));
+                }
+                break;
+            case Calendar.TUESDAY:
+                for(int i=0;i<clinicData.getBooking_time_slots().getTue().size();i++){
+                    timeSlot.add(clinicData.getBooking_time_slots().getTue().get(i));
+                }
+                break;
+            case Calendar.WEDNESDAY:
+                for(int i=0;i<clinicData.getBooking_time_slots().getWed().size();i++){
+                    timeSlot.add(clinicData.getBooking_time_slots().getWed().get(i));
+                }
+                break;
+            case Calendar.THURSDAY:
+                for(int i=0;i<clinicData.getBooking_time_slots().getThu().size();i++){
+                    timeSlot.add(clinicData.getBooking_time_slots().getThu().get(i));
+                }
+                break;
+            case Calendar.FRIDAY:
+                for(int i=0;i<clinicData.getBooking_time_slots().getFri().size();i++){
+                    timeSlot.add(clinicData.getBooking_time_slots().getFri().get(i));
+                }
+                break;
+            case Calendar.SATURDAY:
+                for(int i=0;i<clinicData.getBooking_time_slots().getSat().size();i++){
+                    timeSlot.add(clinicData.getBooking_time_slots().getSat().get(i));
+                }
+                break;
+            default:
+                break;
         }
+
     }
 
     @Override

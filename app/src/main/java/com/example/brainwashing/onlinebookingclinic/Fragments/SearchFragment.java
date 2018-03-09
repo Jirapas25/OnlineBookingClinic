@@ -52,7 +52,9 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
         View view = inflater.inflate(R.layout.fragment_search, container, false);
         pd = new ProgressDialog(getActivity());
         pd.setMessage("Finding your location");
-        pd.show();
+        if(current_lat == null){
+            pd.show();
+        }
         Button btn_search = (Button)view.findViewById(R.id.btn_search);
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,7 +103,7 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
             if(locationAvailability.isLocationAvailable()) {
                 LocationRequest locationRequest = new LocationRequest()
                         .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                        .setInterval(50000);
+                        .setInterval(5000);
                 LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, locationRequest, this);
 
             } else {
@@ -128,6 +130,6 @@ public class SearchFragment extends Fragment implements GoogleApiClient.Connecti
         pd.dismiss();
         current_lat = location.getLatitude();
         current_lng = location.getLongitude();
-        Log.i(TAG,current_lat + " " + current_lng);
+        //Log.i(TAG,current_lat + " " + current_lng);
     }
 }

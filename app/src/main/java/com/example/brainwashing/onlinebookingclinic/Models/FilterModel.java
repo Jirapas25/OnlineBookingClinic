@@ -5,4 +5,14 @@ package com.example.brainwashing.onlinebookingclinic.Models;
  */
 
 public class FilterModel {
+    public boolean openNow;
+    public float distance;
+    public String specialist;
+
+    public FilterModel(boolean opennow,float dis,String specialist){
+        openNow = opennow;
+        distance = dis;
+        this.specialist = specialist;
+    }
+
 }

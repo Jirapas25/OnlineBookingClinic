@@ -1,10 +1,11 @@
 package com.example.brainwashing.onlinebookingclinic.Models;
 
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Booking_time_slots {
-
+public class Booking_time_slots implements Serializable {
+    private final static long serialVersionUID = 7587525179371352004L;
     private List<String> fri = null;
     private List<String> mon = null;
     private List<String> sat = null;

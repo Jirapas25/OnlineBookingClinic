@@ -1,10 +1,11 @@
 
 package com.example.brainwashing.onlinebookingclinic.Models;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class ClinicDataModel {
-
+public class ClinicDataModel implements Serializable {
+    private final static long serialVersionUID = -2137762088817515042L;
     private String clinic_address;
     private String clinic_email;
     private String clinic_image;
