@@ -2,6 +2,7 @@ package com.example.brainwashing.onlinebookingclinic;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -30,6 +31,7 @@ public class ClinicDetailsActivity extends AppCompatActivity {
     private TextView addr;
     private TextView open;
     private TextView dist;
+    private TextView hour;
     private Button callBtn;
 
     private Context con = this;
@@ -47,6 +49,7 @@ public class ClinicDetailsActivity extends AppCompatActivity {
         addr = (TextView)findViewById(R.id.d_address);
         open = (TextView) findViewById(R.id.d_open);
         dist = (TextView) findViewById(R.id.d_distance);
+        hour = (TextView) findViewById(R.id.d_hours);
         callBtn = (Button) findViewById(R.id.btn_call);
 
 
@@ -58,7 +61,10 @@ public class ClinicDetailsActivity extends AppCompatActivity {
         ImageView smap = (ImageView) findViewById(R.id.staticMap);
         ImageView cover = (ImageView) findViewById(R.id.cover_photo);
         final ClinicDataModel clinic= (ClinicDataModel) getIntent().getSerializableExtra("clinicDetails");
-
+        double lat,lng;
+        lat = clinic.getLocation().getLatitude();
+        lng = clinic.getLocation().getLongitude();
+        String url = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lng+"&zoom=13&scale=false&size=500x200&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C"+lat+","+lng;
         Glide.with(this)
                 .load(url)
                 .into(smap);
@@ -84,8 +90,15 @@ public class ClinicDetailsActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         name.setText(clinic.getClinic_name());
         addr.setText(clinic.getClinic_address());
-        open.setText(clinic.getClinic_name());
-        dist.setText(show_dist);
+        hour.setText("Today Open Time : " + clinic.getOpen_hours().getSat()); //TODO: check this day
+        if(clinic.is_open){
+            open.setText("Open Now");
+            open.setTextColor(Color.parseColor("#7CFC00"));
+        }else {
+            open.setText("Closed");
+            open.setTextColor(Color.parseColor("#DC143C"));
+        }
+        dist.setText("distance : " + show_dist+ " km");
 
     }
 

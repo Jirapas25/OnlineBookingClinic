@@ -198,7 +198,7 @@ public class SearchActivity extends AppCompatActivity implements OnMapReadyCallb
                                 }
                                 float distF = c.distance/1000;
                                 String show_dist = String.format("%.01f", distF);
-                                dist.setText(show_dist);
+                                dist.setText(show_dist + " km");
                                 data = c;
 
                                 layout_marker.setVisibility(View.VISIBLE);
@@ -257,7 +257,7 @@ public class SearchActivity extends AppCompatActivity implements OnMapReadyCallb
             default:
                 break;
         }
-        if (time.equals("close")) {
+        if (!time.equals("close")) {
             String[] timeSplit = time.split("-");
             Log.i("time", timeSplit[0] + " " + timeSplit[1]);
             SimpleDateFormat parser = new SimpleDateFormat("HH:mm");
@@ -317,7 +317,7 @@ public class SearchActivity extends AppCompatActivity implements OnMapReadyCallb
                 Log.i("dt",datatoview.get(i).getClinic_name());
             }
         }*/
-        
+
         mAdapter.updateData(datatoview);
     }
 
