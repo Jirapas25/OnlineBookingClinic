@@ -44,7 +44,10 @@
         <activity
             android:name=".MainActivity"
             android:label="MainActivity" />
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".BookingInfoActivity" />
+        <activity android:name=".ConfirmActivity" />
+        <activity android:name=".AppointmentActivity"></activity>
     </application>
 
 </manifest>

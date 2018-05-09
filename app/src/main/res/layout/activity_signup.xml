@@ -4,63 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.brainwashing.onlinebookingclinic.SignupActivity">
+    tools:context="com.example.brainwashing.onlinebookingclinic.SignupActivity"
+    tools:layout_editor_absoluteY="25dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/fnameTxt"
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Create Account"
+                    android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionBar.Title" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="8dp"
+        card_view:cardCornerRadius="6dp"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/lnameTxt"
-            android:layout_marginTop="58dp"
-            android:ems="10"
-            android:hint="Firstname"
-            android:inputType="textPersonName" />
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
-        <EditText
-            android:id="@+id/lnameTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/fnameTxt"
-            android:layout_marginStart="74dp"
-            android:ems="10"
-            android:hint="Lastname"
-            android:inputType="textPersonName" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                app:srcCompat="@drawable/man" />
 
-        <Button
-            android:id="@+id/signupBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/passTxt"
-            android:layout_alignStart="@+id/passTxt"
-            android:layout_below="@+id/passTxt"
-            android:layout_marginTop="45dp"
-            android:text="join now" />
+            <EditText
+                android:id="@+id/fnameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="Firstname"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20dp"
 
-        <EditText
-            android:id="@+id/emailTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/lnameTxt"
-            android:layout_below="@+id/lnameTxt"
-            android:ems="10"
-            android:hint="Your Email"
-            android:inputType="textPersonName" />
+                android:paddingVertical="10dp" />
 
-        <EditText
-            android:id="@+id/passTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/emailTxt"
-            android:layout_below="@+id/emailTxt"
-            android:ems="10"
-            android:hint="New password"
-            android:inputType="textPersonName" />
-    </RelativeLayout>
+            <EditText
+                android:id="@+id/lnameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="Lastname"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+
+            <EditText
+                android:id="@+id/emailTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="Your Email"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+            <EditText
+                android:id="@+id/passTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="New password"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp" />
+
+            <Button
+                android:id="@+id/signupBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_blue"
+                android:text="join now"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>

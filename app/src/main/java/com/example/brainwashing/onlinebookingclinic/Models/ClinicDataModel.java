@@ -20,6 +20,7 @@ public class ClinicDataModel implements Serializable {
     public Boolean is_open;
     public float distance;
     public String clinic_id;
+    public String date_pick;
 
     public String getClinic_address() {
         return clinic_address;

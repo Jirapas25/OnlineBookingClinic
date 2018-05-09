@@ -12,4 +12,5 @@
     <string name="open_now">Open Now</string>
     <string name="specialty">Specialty</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="btn_signup"><u>Sign Up For Zdoc</u></string>
 </resources>

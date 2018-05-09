@@ -1,63 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.brainwashing.onlinebookingclinic.LoginActivity"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:paddingVertical="5dp"
+    android:paddingHorizontal="20dp"
+    android:gravity="center_vertical"
     tools:showIn="@layout/activity_login">
 
-        <EditText
-            android:id="@+id/usernameTxt"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="91dp"
-            android:ems="10"
-            android:hint="username"
-            android:inputType="textPersonName" />
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/login" />
 
-        <EditText
-            android:id="@+id/passTxt"
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/usernameTxt"
-            android:layout_below="@+id/usernameTxt"
-            android:layout_marginTop="21dp"
-            android:ems="10"
-            android:hint="password"
-            android:inputType="textPassword" />
+            card_view:cardCornerRadius="6dp">
 
-        <Button
-            android:id="@+id/googleBtn"
-            android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:paddingVertical="5dp"
+                    android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/usernameTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:ems="10"
+                            android:hint="username"
+                            android:inputType="textPersonName"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/medium_gray" />
+
+                        <EditText
+                            android:id="@+id/passTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:ems="10"
+                            android:background="@color/white"
+                            android:hint="password"
+                            android:inputType="textPassword" />
+
+                </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/passTxt"
-            android:layout_alignStart="@+id/passTxt"
-            android:layout_below="@+id/passTxt"
-            android:layout_marginTop="62dp"
-            android:background="@drawable/common_google_signin_btn_icon_dark_focused" />
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/loginBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/googleBtn"
-            android:layout_alignStart="@+id/googleBtn"
-            android:layout_below="@+id/googleBtn"
-            android:layout_marginTop="16dp"
-            android:text="sign in with email" />
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/mybtn"
+                    android:text="sign in" />
 
-        <Button
-            android:id="@+id/createAccountBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/loginBtn"
-            android:layout_alignStart="@+id/loginBtn"
-            android:layout_below="@+id/loginBtn"
-            android:layout_marginTop="19dp"
-            android:text="Sign up" />
+                <Button
+                    android:id="@+id/googleBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/googlebtn"
+                    android:drawableLeft="@drawable/google_plus2"
+                    android:paddingLeft="10dp"
+                    android:text="connect with google"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
 
-</RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginVertical="15dp"
+                    android:textSize="17dp"
+                    android:text="Don't have an account?" />
+
+                <Button
+                    android:id="@+id/createAccountBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/mybtnsecond"
+                    android:text="Sign up" />
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

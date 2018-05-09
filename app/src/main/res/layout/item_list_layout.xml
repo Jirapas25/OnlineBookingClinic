@@ -34,6 +34,18 @@
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/pexels_photo_clinic2" />
 
+            <!--<de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageView_clinic_logo"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/pexels_photo_clinic2"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white"/>-->
+
             <TextView
                 android:id="@+id/textView_clinic_name"
                 android:singleLine="true"

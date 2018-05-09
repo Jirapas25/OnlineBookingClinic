@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context="com.example.brainwashing.onlinebookingclinic.ConfirmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="114dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="108dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/confirm128" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue"
+                    android:layout_margin="10dp"
+                    android:text="Booking Successful" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Your booking has been successful, Thanks for your booking"
+                    android:textSize="16dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="20dp"
+                    android:background="@color/medium_gray" />
+
+                <TextView
+                    android:id="@+id/c_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Date : 12-2-2018"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/c_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Time : 09:00"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/c_clinic_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Clinic : Phuket Dental"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/c_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Address : 132 Phang nga road"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/c_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Book Status : Pending"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/btn_confirm_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/light_blue"
+                    android:text="View my appointment"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="128dp"
+                    tools:layout_editor_absoluteY="454dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

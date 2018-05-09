@@ -90,6 +90,7 @@ public class SearchActivity extends AppCompatActivity implements OnMapReadyCallb
     private Button more;
     private LinearLayout layout_marker;
     private ImageView img;
+    private String date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +104,7 @@ public class SearchActivity extends AppCompatActivity implements OnMapReadyCallb
         Bundle bundle = getIntent().getExtras();
         currentLat = bundle.getDouble("lat");
         currentLng = bundle.getDouble("lng");
+        date = bundle.getString("date","def");
 
         mClinicRef = FirebaseDatabase.getInstance().getReference("clinics");
         mRecyclerView = (RecyclerView) findViewById(R.id.RecycleView);
@@ -127,16 +129,16 @@ public class SearchActivity extends AppCompatActivity implements OnMapReadyCallb
         layout_marker = (LinearLayout) findViewById(R.id.markerDetail);
         layout_marker.setVisibility(View.INVISIBLE);
 
-        filterBtn = (Button) findViewById(R.id.filterBtn);
-        searchBtn = (Button) findViewById(R.id.searchBtn);
+        //filterBtn = (Button) findViewById(R.id.filterBtn);
+        //searchBtn = (Button) findViewById(R.id.searchBtn);
         mapSwapBtn = (Button) findViewById(R.id.mapSwapBtn);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
         mapSwapBtn.setOnClickListener(mapSwapListener);
-        filterBtn.setOnClickListener(filterListener);
-        searchBtn.setOnClickListener(searchListener);
+        //filterBtn.setOnClickListener(filterListener);
+        //searchBtn.setOnClickListener(searchListener);
     }
 
 
@@ -152,10 +154,13 @@ public class SearchActivity extends AppCompatActivity implements OnMapReadyCallb
                     clinic.clinic_id = singleSnapshot.getKey();
                     clinic.distance = calculateDistance(clinic.getLocation().getLatitude(), clinic.getLocation().getLongitude());
                     clinic.is_open = isOpenNow(clinic.getOpen_hours());
-
+                    clinic.date_pick = date;
                     System.out.println((clinic.getClinic_name()));
                     System.out.println((clinic.clinic_id));
                     System.out.println((clinic.distance));
+
+
+
                     datatoview.add(clinic);
                     datatemp.add(clinic);
                 }
